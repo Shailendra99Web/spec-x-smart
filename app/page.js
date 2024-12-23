@@ -1,101 +1,138 @@
+'use client'
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { Raleway, Oswald } from "next/font/google";
+import { useState } from "react";
 
+const raleway = Raleway({
+  subsets: ["latin"],
+  variable: "--font-raleway", // Define a CSS variable
+  weight: "700", // Choose the required weight
+  display: "swap", // Use "swap" for better UX
+});
+
+const oswald = Oswald({
+  subsets: ["latin"],
+  variable: "--font-raleway", // Define a CSS variable
+  weight: "700", // Choose the required weight
+  display: "swap", // Use "swap" for better UX
+});
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const [activeChart, setActiveChart] = useState('SpecXSizer')
+  const [chartContent, setChartContent] = useState(['1', 'SpecXSizer', 'Use AI To Fit Your Face And Get The Perfect Data For Frames That Suit You.',])
+
+  const allChartVarData = {
+    'SpecXSizer': 'Use AI To Fit Your Face And Get The Perfect Data For Frames That Suit You.',
+    'Portal Registration': 'About Portal Registration Lorem ipsum dolor sit amet, consectetur.',
+    'SpecXViewer': 'About SpecXViewer Lorem ipsum dolor sit amet, consectetur.',
+    'SpecXSorter': 'About SpecXSorter Lorem ipsum dolor sit amet, consectetur.',
+    'SpecXFusion': 'About SpecXFusion Lorem ipsum dolor sit amet, consectetur.',
+    Ordering: 'About Ordering Lorem ipsum dolor sit amet, consectetur.',
+  }
+
+  const selectChartVar = (e) => {
+    const varText = e.target.textContent //1. SpecXSizer
+    const varTextNumber = e.target.textContent.slice(0, 1) //1
+    const varTextForDesIdentify = e.target.textContent.slice(3) //SpecXSizer
+
+    console.log('varText :', varText)
+    console.log('varTextNumber :', varTextNumber)
+    console.log('varTextForDesIdentify :', varTextForDesIdentify)
+    console.log('which one is selected:', allChartVarData[varTextForDesIdentify])
+
+    const newChartContent = [varTextNumber, varTextForDesIdentify, allChartVarData[varTextForDesIdentify]]
+    console.log(newChartContent)
+
+    setActiveChart(varTextForDesIdentify);
+    setChartContent(newChartContent);
+  }
+
+  return (
+    <div>
+      {/* Main Viewer */}
+      <section className=" h-96 flex mx-24 my-14 justify-evenly items-center">
+        <div className="justify-evenly items-center">
+          <div>
+            <p className="text-3xl text-[#0e0e0e]">Discover The Future With</p>
+            <p className="text-5xl text-primary font-bold">SpecXSmart</p>
+            <p className="text-sm text-[#818288] font-bold">Discover the Innovative Process Of Customizing Your Glasses</p>
+          </div>
+          <div id='get-start' className='flex space-x-4 my-8'>
+            <Button className='font-bold'>Get Started</Button>
+            <Button className='font-bold bg-customColor3 text-customColor'>Log In</Button>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className='hidden bg-white rounded-xl md:block'>
+          <img src='/images/specGirl.png' alt='logo' className='h-96'></img>
+        </div>
+      </section>
+
+      {/* Brands */}
+      <section className="band bg-gray-50 text-[#c1c1c1] flex items-center p-2 md:p-3 mb-8">
+        <div
+          className="grid grid-row-2 md:grid-rows-1 grid-cols-2 md:grid-cols-4 w-full justify-evenly items-center">
+          <div className="text-center noselect"><span className="pr-2"><Image width={45} height={16} className="inline w-auto h-auto" src="/images/brands/brand-4-g.png" alt=""></Image></span>AVON</div>
+          <div className="text-center noselect"><span className="pr-2"><Image width={45} height={16} className="inline w-auto h-auto" src="/images/brands/brand-1-g.png" alt=""></Image></span>BIGMG</div>
+          <div className="text-center noselect"><span className="pr-2"><Image width={45} height={16} className="inline w-auto h-auto" src="/images/brands/brand-2-g.png" alt=""></Image></span>REPTOO</div>
+          <div className="text-center noselect"><span className="pr-2"><Image width={45} height={16} className="inline w-auto h-auto" src="/images/brands/brand-3-g.png" alt=""></Image></span>FEATHER</div>
+        </div>
+      </section>
+
+      {/* Analaysis */}
+      <section className=" h-96 mx-24 my-14 hidden flex-col justify-center items-center font-semibold text-gray-500 md:flex">
+
+        <div className="">
+          <div className="flex justify-between">
+
+            <div className="pl-[20%] flex items-start space-x-2 px-2 py-0">
+              <button className={`w-[107px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Ordering' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>6. Ordering</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Ordering' ? 'visible' : 'invisible'}`}></span>
+            </div>
+
+            <div className="pr-[30%] flex items-start space-x-2 px-2 py-0">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSizer' ? 'visible' : 'invisible'}`}></span>
+              <button className={`w-[132px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSizer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>1. SpecXSizer</button>
+            </div>
+
+          </div>
+          <div className='flex items-center'>
+
+            <div className="flex items-start space-x-2 p-2">
+              <button className={`w-[149px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXFusion' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>5. SpecXFusion</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXFusion' ? 'visible' : 'invisible'}`}></span>
+            </div>
+
+            <div style={{ background: 'radial-gradient(circle, rgba(145,209,240,1) 0%, rgba(22,172,241,1) 100%)' }} className='flex flex-col justify-center items-center text-center h-[250px] w-[380px] rounded-[50%] transition-all'>
+              <h1 className={`text-customColor4 text-8xl font-bold`}>{chartContent[0]}</h1>
+              <h2 className={`text-customColor4 text-lg font-bold ${raleway.className}`}>{`${chartContent[0]}. ${chartContent[1]}`}</h2>
+              <p className="w-[250px] text-sm text-gray-500 font-semibold">{chartContent[2]}</p>
+              {/* <p className="text-sm text-gray-500 font-semibold"></p> */}
+            </div>
+
+            <div className="flex items-start space-x-2 p-2">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Portal Registration' ? 'visible' : 'invisible'}`}></span>
+              <button className={`w-[202px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Portal Registration' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>2. Portal Registration</button>
+            </div>
+          </div>
+
+          <div className='flex justify-between'>
+
+            <div className="pl-[15%] flex items-start space-x-2 px-2 py-0">
+              <button className={`w-[148px] h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXViewer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>4. SpecXViewer</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXViewer' ? 'visible' : 'invisible'}`}></span>
+            </div>
+
+            <div className="pr-[20%] flex items-start space-x-2 px-2 py-0">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSorter' ? 'visible' : 'invisible'}`}></span>
+              <button className={`w-[143px] h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSorter' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>3. SpecXSorter</button>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
     </div>
-  );
+  )
 }

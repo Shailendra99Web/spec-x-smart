@@ -1,5 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import Header from "@/_components/Header";
+import Navbar from "@/_components/Navbar";
+import { Roboto, Raleway } from "next/font/google";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -11,6 +14,20 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+const roboto = Roboto({
+  subsets: ["latin"], // Include specific subsets if needed
+  variable: "--font-roboto", // Define a CSS variable for the font
+  weight: "500", // Range of weights to preload
+  display: "swap", // Use "swap" for better UX
+});
+
+const raleway = Raleway({
+  subsets: ["latin"], // Include specific subsets if needed
+  variable: "--font-raleway", // Define a CSS variable for the font
+  weight: "800", // Specify the font weight(s) you need
+  display: "swap", // Use "swap" for better UX
+});
+
 
 export const metadata = {
   title: "Create Next App",
@@ -21,8 +38,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${roboto.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Header/>
+        <Navbar/>
         {children}
       </body>
     </html>
