@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "@/_components/Header";
 import Navbar from "@/_components/Navbar";
 import { Roboto, Raleway } from "next/font/google";
+import { SidebarProvider } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/_components/app-sidebar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -40,9 +42,17 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Header/>
-        <Navbar/>
-        {children}
+        <SidebarProvider>
+          {/* SideBar - AppSidebar */}
+          {/* <div> */}
+            <AppSidebar />
+            <div className="w-full">
+              <Header />
+              <Navbar />
+              {children}
+            </div>
+          {/* </div> */}
+        </SidebarProvider>
       </body>
     </html>
   );

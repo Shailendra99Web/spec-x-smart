@@ -49,11 +49,18 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <main>
       {/* Main Viewer */}
-      <section className=" h-96 flex mx-24 my-14 justify-evenly items-center">
-        <div className="justify-evenly items-center">
-          <div>
+      <section className="flex justify-evenly items-center m-8">
+        <div className="flex flex-col justify-evenly items-center md:items-start">
+
+          <div className=' bg-white rounded-xl md:hidden'>
+            {/* <img src='/images/specGirl.png' alt='logo' className='h-96'></img> */}
+            {/* <Image  alt='logo' className='h-96'></Image> */}
+            <Image width={250} height={200} className="h-auto w-auto bg-customColor2 rounded-lg" src='/images/whiteGirl.png' alt="girlPic"></Image>
+          </div>
+
+          <div className="mt-4 mx-8 md:mt-auto md:mx-auto">
             <p className="text-3xl text-[#0e0e0e]">Discover The Future With</p>
             <p className="text-5xl text-primary font-bold">SpecXSmart</p>
             <p className="text-sm text-[#818288] font-bold">Discover the Innovative Process Of Customizing Your Glasses</p>
@@ -65,7 +72,7 @@ export default function Home() {
         </div>
 
         <div className='hidden bg-white rounded-xl md:block'>
-          <img src='/images/specGirl.png' alt='logo' className='h-96'></img>
+          <Image width={250} height={200} className="h-auto w-auto bg-customColor2 rounded-lg" src='/images/whiteGirl.png' alt="girlPic"></Image>
         </div>
       </section>
 
@@ -80,8 +87,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Analaysis */}
-      <section className=" h-96 mx-24 my-14 hidden flex-col justify-center items-center font-semibold text-gray-500 md:flex">
+      {/* Analaysis (for Desktop) */}
+      <section className=" h-96 mx-auto my-14 hidden md:flex flex-col justify-center items-center font-semibold text-gray-500">
 
         <div className="">
           <div className="flex justify-between">
@@ -99,19 +106,19 @@ export default function Home() {
           </div>
           <div className='flex items-center'>
 
-            <div className="flex items-start space-x-2 p-2">
+            <div className="flex items-start space-x-2 pr-1">
               <button className={`w-[149px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXFusion' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>5. SpecXFusion</button>
               <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXFusion' ? 'visible' : 'invisible'}`}></span>
             </div>
 
-            <div style={{ background: 'radial-gradient(circle, rgba(145,209,240,1) 0%, rgba(22,172,241,1) 100%)' }} className='flex flex-col justify-center items-center text-center h-[250px] w-[380px] rounded-[50%] transition-all'>
+            <div style={{ background: 'radial-gradient(circle, rgba(145,209,240,1) 0%, rgba(22,172,241,1) 100%)' }} className='flex flex-col justify-center items-center text-center h-[230px] w-[340px] rounded-[50%] transition-all'>
               <h1 className={`text-customColor4 text-8xl font-bold`}>{chartContent[0]}</h1>
               <h2 className={`text-customColor4 text-lg font-bold ${raleway.className}`}>{`${chartContent[0]}. ${chartContent[1]}`}</h2>
               <p className="w-[250px] text-sm text-gray-500 font-semibold">{chartContent[2]}</p>
               {/* <p className="text-sm text-gray-500 font-semibold"></p> */}
             </div>
 
-            <div className="flex items-start space-x-2 p-2">
+            <div className="flex items-start space-x-2 pl-1">
               <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Portal Registration' ? 'visible' : 'invisible'}`}></span>
               <button className={`w-[202px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Portal Registration' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>2. Portal Registration</button>
             </div>
@@ -133,6 +140,56 @@ export default function Home() {
         </div>
 
       </section>
-    </div>
+
+
+      {/* Analaysis (for Mobiles) */}
+      <section className="mx-24 my-14 flex md:hidden flex-col justify-center items-center font-semibold text-gray-500">
+
+        <div className="">
+
+          <div className="my-7 flex justify-between">
+            <div style={{ background: 'radial-gradient(circle, rgba(145,209,240,1) 0%, rgba(22,172,241,1) 100%)' }} className='flex flex-col justify-center items-center text-center h-72 w-72 rounded-[50%] transition-all'>
+              <h1 className={`text-customColor4 text-8xl font-bold`}>{chartContent[0]}</h1>
+              <h2 className={`text-customColor4 text-lg font-bold ${raleway.className}`}>{`${chartContent[0]}. ${chartContent[1]}`}</h2>
+              <p className="w-[250px] text-sm text-gray-500 font-semibold">{chartContent[2]}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-between">
+
+            <div className="flex items-center space-x-2 p-2">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSizer' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSizer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>1. SpecXSizer</button>
+            </div>
+
+            <div className="flex items-center space-x-2 p-2">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Portal Registration' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Portal Registration' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>2. Portal Registration</button>
+            </div>
+
+            <div className="flex items-center space-x-2 p-2">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSorter' ? 'visible' : 'invisible'}`}></span>
+              <button className={`h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSorter' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>3. SpecXSorter</button>
+            </div>
+
+            <div className="flex items-center space-x-2 p-2">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXViewer' ? 'visible' : 'invisible'}`}></span>
+              <button className={`h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXViewer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>4. SpecXViewer</button>
+            </div>
+
+            <div className="flex items-center space-x-2 p-2">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXFusion' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXFusion' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>5. SpecXFusion</button>
+            </div>
+
+            <div className="flex items-center space-x-2 p-2">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Ordering' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Ordering' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>6. Ordering</button>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
   )
 }
