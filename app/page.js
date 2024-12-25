@@ -58,7 +58,7 @@ export default function Home() {
             <Image width={250} height={200} className="h-auto w-auto bg-customColor2 rounded-lg" src='/images/whiteGirl.png' alt="girlPic"></Image>
           </div>
 
-          <div className="mt-4 mx-8 md:mt-auto md:mx-auto">
+          <div className="mt-8 mx-8 md:mt-auto md:mx-auto">
             <p className="text-3xl text-[#0e0e0e]">Discover The Future With</p>
             <p className="text-5xl text-primary font-bold">SpecXSmart</p>
             <p className="text-sm text-[#818288] font-bold">Discover the Innovative Process Of Customizing Your Glasses</p>
