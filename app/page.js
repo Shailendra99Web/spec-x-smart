@@ -93,47 +93,47 @@ export default function Home() {
         <div className="">
           <div className="flex justify-between">
 
-            <div className="pl-[20%] flex items-start space-x-2 px-2 py-0">
-              <button className={`w-[107px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Ordering' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>6. Ordering</button>
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Ordering' ? 'visible' : 'invisible'}`}></span>
+            <div className="pl-[20%] flex items-start px-2 py-0">
+              <button className={`w-[107px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Ordering' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>6. Ordering</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'Ordering' ? 'visible' : 'invisible'}`}></span>
             </div>
 
-            <div className="pr-[30%] flex items-start space-x-2 px-2 py-0">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSizer' ? 'visible' : 'invisible'}`}></span>
-              <button className={`w-[132px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSizer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>1. SpecXSizer</button>
+            <div className="pr-[30%] flex items-start px-2 py-0">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXSizer' ? 'visible' : 'invisible'}`}></span>
+              <button className={`w-[132px] inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXSizer' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>1. SpecXSizer</button>
             </div>
 
           </div>
           <div className='flex items-center'>
 
-            <div className="flex items-start space-x-2 pr-1">
-              <button className={`w-[149px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXFusion' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>5. SpecXFusion</button>
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXFusion' ? 'visible' : 'invisible'}`}></span>
+            <div className="flex items-start pr-1">
+              <button className={`w-[149px] inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXFusion' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>5. SpecXFusion</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXFusion' ? 'visible' : 'invisible'}`}></span>
             </div>
 
             <div style={{ background: 'radial-gradient(circle, rgba(145,209,240,1) 0%, rgba(22,172,241,1) 100%)' }} className='flex flex-col justify-center items-center text-center h-[230px] w-[340px] rounded-[50%] transition-all'>
               <h1 className={`text-customColor4 text-8xl font-bold`}>{chartContent[0]}</h1>
               <h2 className={`text-customColor4 text-lg font-bold ${raleway.className}`}>{`${chartContent[0]}. ${chartContent[1]}`}</h2>
-              <p className="w-[250px] text-sm text-gray-500 font-semibold">{chartContent[2]}</p>
+              <p className="w-[250px] text-xs text-gray-500 font-semibold">{chartContent[2]}</p>
               {/* <p className="text-sm text-gray-500 font-semibold"></p> */}
             </div>
 
-            <div className="flex items-start space-x-2 pl-1">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Portal Registration' ? 'visible' : 'invisible'}`}></span>
-              <button className={`w-[202px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Portal Registration' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>2. Portal Registration</button>
+            <div className="flex items-start pl-1">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'Portal Registration' ? 'visible' : 'invisible'}`}></span>
+              <button className={`w-[202px] inline-block hover:text-lg hover:text-customColor4 text-wrap ${activeChart == 'Portal Registration' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>2. Portal Registration</button>
             </div>
           </div>
 
           <div className='flex justify-between'>
 
-            <div className="pl-[15%] flex items-start space-x-2 px-2 py-0">
-              <button className={`w-[148px] h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXViewer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>4. SpecXViewer</button>
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXViewer' ? 'visible' : 'invisible'}`}></span>
+            <div className="pl-[15%] flex items-start px-2 py-0">
+              <button className={`w-[148px] h-[28px] inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXViewer' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>4. SpecXViewer</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXViewer' ? 'visible' : 'invisible'}`}></span>
             </div>
 
-            <div className="pr-[20%] flex items-start space-x-2 px-2 py-0">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSorter' ? 'visible' : 'invisible'}`}></span>
-              <button className={`w-[143px] h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSorter' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>3. SpecXSorter</button>
+            <div className="pr-[20%] flex items-start px-2 py-0">
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXSorter' ? 'visible' : 'invisible'}`}></span>
+              <button className={`w-[143px] h-[28px] inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXSorter' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>3. SpecXSorter</button>
             </div>
 
           </div>
@@ -151,40 +151,40 @@ export default function Home() {
             <div style={{ background: 'radial-gradient(circle, rgba(145,209,240,1) 0%, rgba(22,172,241,1) 100%)' }} className='flex flex-col justify-center items-center text-center h-72 w-72 rounded-[50%] transition-all'>
               <h1 className={`text-customColor4 text-8xl font-bold`}>{chartContent[0]}</h1>
               <h2 className={`text-customColor4 text-lg font-bold ${raleway.className}`}>{`${chartContent[0]}. ${chartContent[1]}`}</h2>
-              <p className="w-[250px] text-sm text-gray-500 font-semibold">{chartContent[2]}</p>
+              <p className="w-[250px] text-xs text-gray-500 font-semibold">{chartContent[2]}</p>
             </div>
           </div>
 
           <div className="flex flex-col justify-between">
 
             <div className="flex items-center space-x-2 p-2">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSizer' ? 'visible' : 'invisible'}`}></span>
-              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSizer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>1. SpecXSizer</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXSizer' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXSizer' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>1. SpecXSizer</button>
             </div>
 
             <div className="flex items-center space-x-2 p-2">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Portal Registration' ? 'visible' : 'invisible'}`}></span>
-              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Portal Registration' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>2. Portal Registration</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'Portal Registration' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'Portal Registration' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>2. Portal Registration</button>
             </div>
 
             <div className="flex items-center space-x-2 p-2">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXSorter' ? 'visible' : 'invisible'}`}></span>
-              <button className={`h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXSorter' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>3. SpecXSorter</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXSorter' ? 'visible' : 'invisible'}`}></span>
+              <button className={`h-[28px] inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXSorter' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>3. SpecXSorter</button>
             </div>
 
             <div className="flex items-center space-x-2 p-2">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXViewer' ? 'visible' : 'invisible'}`}></span>
-              <button className={`h-[28px] inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXViewer' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>4. SpecXViewer</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXViewer' ? 'visible' : 'invisible'}`}></span>
+              <button className={`h-[28px] inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXViewer' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>4. SpecXViewer</button>
             </div>
 
             <div className="flex items-center space-x-2 p-2">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'SpecXFusion' ? 'visible' : 'invisible'}`}></span>
-              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'SpecXFusion' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>5. SpecXFusion</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'SpecXFusion' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'SpecXFusion' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>5. SpecXFusion</button>
             </div>
 
             <div className="flex items-center space-x-2 p-2">
-              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-10 h-10 rounded-full border border-primary ${activeChart == 'Ordering' ? 'visible' : 'invisible'}`}></span>
-              <button className={`inline-block hover:text-xl hover:text-customColor4 ${activeChart == 'Ordering' ? 'text-xl text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>6. Ordering</button>
+              <span style={{ background: 'radial-gradient(circle, rgba(193,230,240,1) 0%, rgba(93,185,224,1) 100%)' }} className={`inline-block w-9 h-9 rounded-full border border-primary ${activeChart == 'Ordering' ? 'visible' : 'invisible'}`}></span>
+              <button className={`inline-block hover:text-lg hover:text-customColor4 ${activeChart == 'Ordering' ? 'text-lg text-customColor4' : ''}`} onClick={(e) => { selectChartVar(e) }}>6. Ordering</button>
             </div>
 
           </div>

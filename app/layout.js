@@ -42,7 +42,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${roboto.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <SidebarProvider>
+        <SidebarProvider defaultOpen={false}>
           {/* SideBar - AppSidebar */}
           {/* <div> */}
             <AppSidebar />

@@ -56,13 +56,13 @@ const items = [
 export function AppSidebar() {
     return (
         <div className="fixed left-0 z-50 h-full">
-            <Sidebar className='h-full'>
+            <Sidebar className='h-full '>
                 <SidebarContent className='bg-customColor3 '>
                     <div className="relative flex justify-end pt-2 pr-2">
                         <X className="text-gray-500" />
-                        <SidebarTrigger className=' absolute h-full top-0 right-0' />
+                        <SidebarTrigger className=' absolute h-full top-0 right-0 !bg-transparent' />
                     </div>
-                    <SidebarGroup className='pt-0'>
+                    <SidebarGroup className='p-0'>
                         <SidebarGroupLabel className='justify-center items-center pb-2'>
                             <div id='logo' className='text-center mx-auto'>
                                 <p className='text-customColor2 text-2xl font-bold pb-0 mb-0'>Spec<span className='text-customColor text-3xl'>X</span>Smart</p>
@@ -74,7 +74,7 @@ export function AppSidebar() {
                                 {items.map((item) => (
                                     <SidebarMenuItem key={item.title} className=''>
                                         <SidebarMenuButton asChild className='text-primary hover:text-customColor hover:!bg-white'>
-                                            <a href={item.url}>
+                                            <a href={item.url} className='rounded-none p-4'>
                                                 <item.icon />
                                                 <span className='font-bold'>{item.title}</span>
                                             </a>

@@ -37,7 +37,7 @@ const Navbar = () => {
                             </div>
                         </button>
                     </div>
-                    <SidebarTrigger className='absolute w-full h-full top-0' />
+                    <SidebarTrigger className='absolute w-full h-full top-0 !bg-transparent' />
                 </div>
                 <div id='logo' className='text-center'>
                     <p className='text-customColor2 text-2xl font-bold pb-0 mb-0'>Spec<span className='text-customColor text-3xl'>X</span>Smart</p>
