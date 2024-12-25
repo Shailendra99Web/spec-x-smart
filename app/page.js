@@ -51,12 +51,10 @@ export default function Home() {
   return (
     <main>
       {/* Main Viewer */}
-      <section className="flex justify-evenly items-center m-8">
+      <section className="md:flex md:justify-evenly md:items-center md:m-8">
         <div className="flex flex-col justify-evenly items-center md:items-start">
 
-          <div className=' bg-white rounded-xl md:hidden'>
-            {/* <img src='/images/specGirl.png' alt='logo' className='h-96'></img> */}
-            {/* <Image  alt='logo' className='h-96'></Image> */}
+          <div className=' bg-white rounded-xl md:hidden mt-8'>
             <Image width={250} height={200} className="h-auto w-auto bg-customColor2 rounded-lg" src='/images/whiteGirl.png' alt="girlPic"></Image>
           </div>
 
