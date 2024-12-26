@@ -3,6 +3,11 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { Raleway, Oswald } from "next/font/google";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import { FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import ContactUs from "@/_components/ContactUs";
+import { Mail, MapPin, PhoneCall } from "lucide-react";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -21,6 +26,8 @@ export default function Home() {
 
   const [activeChart, setActiveChart] = useState('SpecXSizer')
   const [chartContent, setChartContent] = useState(['1', 'SpecXSizer', 'Use AI To Fit Your Face And Get The Perfect Data For Frames That Suit You.',])
+
+  const form = useForm()
 
   const allChartVarData = {
     'SpecXSizer': 'Use AI To Fit Your Face And Get The Perfect Data For Frames That Suit You.',
@@ -187,6 +194,48 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact Us */}
+      <section className='hidden lg:flex justify-center w-full py-8 my-12'>
+        <div className="h-[500px] w-[420px]">
+          <div className="flex flex-col justify-between h-full bg-customColor3 px-6 py-12 rounded-s-[15%] rounded-tr-[15%]">
+            <div>
+              <h2 className="text-3xl">CONTACT <span className='font-semibold'>US</span></h2>
+              <p className='text-sm text-gray-500 font-semibold'>Contact Us Today To Improve Your Communication And Language Skill</p>
+            </div>
+
+            <div>
+              <h3 className='font-semibold'>Give Us A Call</h3>
+              <p className='flex items-center py-4 pl-4 text-sm text-gray-500 font-semibold'><PhoneCall className='pr-2 w-6'></PhoneCall>0 1225 3445</p>
+            </div>
+
+            <div>
+              <h3 className='font-semibold'>Send Us An Email</h3>
+              <p className='flex items-center py-4 pl-4 text-sm text-gray-500 font-semibold'><Mail className='pr-2 w-6'></Mail>info@specxsmartclinic.com.sc</p>
+            </div>
+
+            <div>
+              <h3 className='font-semibold'>Drop By And Talk</h3>
+              <p className='flex items-center py-4 pl-4 text-sm text-gray-500 font-semibold'><MapPin className='pr-2 w-6'></MapPin>1 Pottery Lane, Lane Cove, 2066</p>
+            </div>
+          </div>
+          <div>
+
+          </div>
+        </div>
+
+        <div className='flex flex-col w-[420px] h-[500px] justify-end relative'>
+          <div className="bg-customColor3 flex-1">
+            <div className="h-full bg-white rounded-bl-[15%]"></div>
+          </div>
+          <div className='w-[390px] bg-customColor3 basis-20'></div>
+          <div className='h-20 w-20 absolute bottom-0 right-0 bg-customColor3 rounded-full z-10'>circle</div>
+          <div className="w-[85%] absolute top-12 right-7 px-8 py-10 bg-white shadow-md shadow-neutral-500 rounded-2xl z-20">
+            <ContactUs />
+          </div>
+        </div>
+      </section>
+
     </main>
   )
 }
