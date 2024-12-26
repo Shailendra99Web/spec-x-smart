@@ -4,10 +4,16 @@ import Image from "next/image";
 import { Raleway, Oswald } from "next/font/google";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
 import ContactUs from "@/_components/ContactUs";
 import { Mail, MapPin, PhoneCall } from "lucide-react";
+
+// Accordion
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -195,9 +201,48 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className='p-8 my-12 flex flex-col justify-center items-center'>
+        <h2 className='text-4xl text-primary font-bold pb-4'>FAQ</h2>
+        <div className="sm:w-3/5 max-w-[580px] space-y-2">
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" id='accItem' className='px-4 border hover:border-primary rounded-lg'>
+              <AccordionTrigger id='accTri' className='gap-2 !text-start'>How Can I use SpecXSizer?</AccordionTrigger>
+              <AccordionContent>
+                About SpecXSizer Lorem ipsum dolor sit amet, consectetur.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" id='accItem' className='px-4 border hover:border-primary rounded-lg'>
+              <AccordionTrigger id='accTri' className='gap-2 !text-start'>Can I Try On The Glasses Before Purchasing?</AccordionTrigger>
+              <AccordionContent>
+                Lorem ipsum dolor sit amet, consectetur.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" id='accItem' className='px-4 border hover:border-primary rounded-lg'>
+              <AccordionTrigger id='accTri' className='gap-2 !text-start'>How Can I Track My Order?</AccordionTrigger>
+              <AccordionContent>
+                About Order Lorem ipsum dolor sit amet, consectetur.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+          <Accordion type="single" collapsible>
+            <AccordionItem value="item-1" id='accItem' className='px-4 border hover:border-primary rounded-lg'>
+              <AccordionTrigger id='accTri' className='gap-2 !text-start'>Do You Offer A Warranty On Your Products?</AccordionTrigger>
+              <AccordionContent>
+                About Warranty Lorem ipsum dolor sit amet, consectetur.
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
+        </div>
+      </section>
+
       {/* Contact Us */}
-      <section className='hidden lg:flex justify-center w-full py-8 my-12'>
-        <div className="h-[500px] w-[420px]">
+      <section className='flex flex-col lg:flex-row justify-center w-full py-8 my-12'>
+        <div className="h-[500px] w-[420px] ml-auto lg:ml-0">
           <div className="flex flex-col justify-between h-full bg-customColor3 px-6 py-12 rounded-s-[15%] rounded-tr-[15%]">
             <div>
               <h2 className="text-3xl">CONTACT <span className='font-semibold'>US</span></h2>
@@ -229,8 +274,8 @@ export default function Home() {
             <div className="h-full bg-white rounded-bl-[15%]"></div>
           </div>
           <div className='w-[390px] bg-customColor3 basis-20'></div>
-          <div className='h-20 w-20 absolute bottom-0 right-0 bg-customColor3 rounded-full z-10'>circle</div>
-          <div className="w-[85%] absolute top-12 right-7 px-8 py-10 bg-white shadow-md shadow-neutral-500 rounded-2xl z-20">
+          <div className='h-20 w-20 absolute bottom-0 right-0 bg-customColor3 rounded-full z-10'></div>
+          <div className="w-[85%] absolute top-9 right-7 px-8 py-8 bg-white shadow-md shadow-neutral-500 rounded-2xl z-20">
             <ContactUs />
           </div>
         </div>

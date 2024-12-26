@@ -83,7 +83,7 @@ const ContactUs = () => {
                             <FormLabel className='font-bold'>Message : </FormLabel>
                             <FormControl>
                                 <div className='relative'>
-                                    <Textarea className='placeholder-shown:bg-[#e2e2e2] pr-9' placeholder="Write your message" {...field}></Textarea>
+                                    <Textarea className='placeholder-shown:bg-[#e2e2e2] pr-9 min-h-28' placeholder="Write your message" {...field}></Textarea>
                                     <PencilLine className='absolute top-0 right-0 py-2 px-2 w-8 h-8' />
                                 </div>
                             </FormControl>
