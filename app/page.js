@@ -242,7 +242,7 @@ export default function Home() {
 
       {/* Contact Us */}
       <section className='flex flex-col lg:flex-row justify-center w-full py-8 my-12'>
-        <div className="h-[500px] w-[420px] ml-auto lg:ml-0">
+        <div className="h-[500px] lg:w-[420px] max-w-[420px] ml-auto lg:ml-0">
           <div className="flex flex-col justify-between h-full bg-customColor3 px-6 py-12 rounded-s-[15%] rounded-tr-[15%]">
             <div>
               <h2 className="text-3xl">CONTACT <span className='font-semibold'>US</span></h2>
@@ -269,11 +269,11 @@ export default function Home() {
           </div>
         </div>
 
-        <div className='flex flex-col w-[420px] h-[500px] justify-end relative'>
+        <div className='flex flex-col lg:w-[420px] max-w-[420px] h-[500px] justify-end relative'>
           <div className="bg-customColor3 flex-1">
             <div className="h-full bg-white rounded-bl-[15%]"></div>
           </div>
-          <div className='w-[390px] bg-customColor3 basis-20'></div>
+          <div className='relative right-10 bg-customColor3 basis-20'></div>
           <div className='h-20 w-20 absolute bottom-0 right-0 bg-customColor3 rounded-full z-10'></div>
           <div className="w-[85%] absolute top-9 right-7 px-8 py-8 bg-white shadow-md shadow-neutral-500 rounded-2xl z-20">
             <ContactUs />
