@@ -201,6 +201,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why Choose Us - SpecXSmart */}
+      <section className='py-8 my-12'>
+        <div className="lg:w-[75%] mx-auto flex flex-col justify-start items-start">
+          <div className="mx-auto lg:mx-0 lg:pl-6 pb-6">
+            <h3 className='text-3xl text-[#0e0e0e]'>Why Choose Us</h3>
+            <h3 className="text-4xl text-primary font-bold pb-4">SpecXSmart</h3>
+          </div>
+          <div className="px-6 flex flex-col sm:flex-row">
+            <ul className='sm:w-[50%] pl-5 sm:pl-6 list-disc space-y-4'>
+              <li>
+                <h3 className='font-semibold !text-customColor4 text-lg'>Innovation In Eyewear Solutions: </h3>
+                <p className='text-gray-500 text-sm relative lg:-left-6'>Revolutionizing the way you see the world with state-of-the-art eyewear designed for clarity, comfort, and style.</p>
+              </li>
+              <li>
+                <h3 className='font-semibold !text-customColor4 text-lg'>Easy and Enjoyable Experiences: </h3>
+                <p className='text-gray-500 text-sm relative lg:-left-6'>We make sure every interaction with our products and services is smooth, intuitive, and delightful, providing you with a hassle-free journey from start to finish.</p>
+              </li>
+              <li>
+                <h3 className='font-semibold !text-customColor4 text-lg'>Continuous Support and Improvement: </h3>
+                <p className='text-gray-500 text-sm relative lg:-left-6'>Our commitment doesn&apos;t end at delivery. We ensure ongoing support, updates, and enhancements to keep you satisfied and up-to-date.</p>
+              </li>
+            </ul>
+            <ul className='sm:w-[50%] pl-5 sm:pl-6 list-disc space-y-4'>
+              <li>
+                <h3 className='font-semibold !text-customColor4 text-lg'>Continuous Service Excellence: </h3>
+                <p className='text-gray-500 text-sm relative lg:-left-6'>Dedicated to delivering superior service every step of the way, ensuring reliability and satisfaction over the long term.</p>
+              </li>
+              <li>
+                <h3 className='font-semibold !text-customColor4 text-lg'>Continuous Smart Innovation: </h3>
+                <p className='text-gray-500 text-sm relative lg:-left-6'>Adapting to ever-changing needs with cutting-edge advancements, keeping you at the forefront of modern technology.</p>
+              </li>
+              <li>
+                <h3 className='font-semibold !text-customColor4 text-lg'>Easy and Enjoyable Solutions: </h3>
+                <p className='text-gray-500 text-sm relative lg:-left-6'>Simplifying complex challenges with user-friendly solutions designed to make your experience seamless and rewarding.</p>
+              </li>
+            </ul>
+          </div>
+          <div className="pt-8 px-6">
+            <Button className='inline-block h-[85px] border-[24px] border-customColor3 font-bold'>Get Started</Button>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className='p-8 my-12 flex flex-col justify-center items-center'>
         <h2 className='text-4xl text-primary font-bold pb-4'>FAQ</h2>
