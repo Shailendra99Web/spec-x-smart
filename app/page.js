@@ -14,6 +14,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { MyCarousel } from "@/_components/MyCarousel";
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -199,6 +200,22 @@ export default function Home() {
 
           </div>
         </div>
+      </section>
+
+      {/* Testemonials */}
+      <section className='lg:w-[75%] mx-auto py-8 my-12 lg:pl-6'>
+        <div className="flex flex-col sm:flex-row justify-between sm:items-center sm:p-4 lg:p-0">
+          <div className='p-4 lg:p-0 text-center'>
+            <h2 className='text-3xl text-customColor4'>What Our Customers <span className='font-semibold'>Say</span></h2>
+            <p className='pt-2 sm:pt-0 text-gray-500 text-sm'>Enjoy Your Look With A Variety Of Brand Options</p>
+          </div>
+          <div className="text-right"><Button className='mr-4 lg:mr-0 px-4 bg-white hover:bg-gray-200 text-customeColor4'>View All<span className='pl-4'>&#8594;</span></Button></div>
+        </div>
+
+        <div className=''>
+          <MyCarousel />
+        </div>
+
       </section>
 
       {/* Why Choose Us - SpecXSmart */}
