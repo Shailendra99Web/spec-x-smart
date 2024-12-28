@@ -78,8 +78,8 @@ export default function Home() {
             <p className="text-sm text-[#818288] font-bold">Discover the Innovative Process Of Customizing Your Glasses</p>
           </div>
           <div id='get-start' className='flex space-x-4 my-8'>
-            <Button className='font-bold'>Get Started</Button>
-            <Button className='font-bold bg-customColor3 text-customColor'>Log In</Button>
+            <Button className='font-bold hover:bg-customColor3 hover:text-customColor'>Get Started</Button>
+            <Button className='font-bold bg-customColor3 text-customColor hover:text-white'>Log In</Button>
           </div>
         </div>
 
@@ -256,7 +256,7 @@ export default function Home() {
             </ul>
           </div>
           <div className="pt-8 px-6">
-            <Button className='inline-block h-[85px] border-[24px] border-customColor3 font-bold'>Get Started</Button>
+            <Button className='inline-block h-[85px] border-[24px] border-customColor3 hover:bg-customColor3 hover:text-customColor font-bold'>Get Started</Button>
           </div>
         </div>
       </section>

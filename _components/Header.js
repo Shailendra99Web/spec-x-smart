@@ -16,8 +16,8 @@ const Header = () => {
                 <p></p>
             </div>
             <div id='get-start' className='flex pt-2 px-4 space-x-4'>
-                <Button className='font-bold bg-customColor3 text-customColor'>Log In</Button>
-                <Button className='font-bold'>Get Started</Button>
+                <Button className='font-bold bg-customColor3 text-customColor hover:text-white'>Log In</Button>
+                <Button className='font-bold hover:bg-customColor3 hover:text-customColor'>Get Started</Button>
             </div>
         </div>
     )
