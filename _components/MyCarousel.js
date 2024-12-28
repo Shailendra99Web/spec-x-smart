@@ -31,7 +31,7 @@ export function MyCarousel() {
         <Carousel id='mainCarousel' className="flex flex-col space-y-4" opts={{ align: "start", loop: true, }}
         plugins={[
             Autoplay({
-                delay: 3000,
+                delay: 10000,
             }),
         ]}
         >
