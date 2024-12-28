@@ -29,11 +29,11 @@ export function MyCarousel() {
 
     return (
         <Carousel id='mainCarousel' className="flex flex-col space-y-4" opts={{ align: "start", loop: true, }}
-        // plugins={[
-        //     Autoplay({
-        //         delay: 5000,
-        //     }),
-        // ]}
+        plugins={[
+            Autoplay({
+                delay: 3000,
+            }),
+        ]}
         >
             <CarouselContent id='CarouselContent' className='md:w-full m-4 lg:pr-6'>
 
